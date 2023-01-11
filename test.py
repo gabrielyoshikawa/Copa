@@ -478,7 +478,7 @@ elif pontosBrasil == pontosServia and pontosBrasil == pontosCamaroes:
             
     elif saldoServia > saldoBrasil and saldoServia > saldoCamaroes:
         print('1° Sérvia')
-        if saldoBrasil > saldoSuica:
+        if saldoBrasil > saldoCamaroes:
             print('2° Brasil')
         elif saldoSuica > saldoBrasil:
             print('2° Camarões')
@@ -573,4 +573,44 @@ elif pontosServia == pontosSuica and pontosServia == pontosCamaroes:
                 print('2º Sérvia')
             else:
                 print('2º Suíça')
-    
+
+# 4 Seleções empatadas em primeiro
+# Brasil Vencedor
+elif pontosBrasil == pontosCamaroes == pontosServia == pontosSuica:
+    if saldoBrasil > saldoCamaroes and saldoBrasil > saldoServia and saldoBrasil > saldoSuica:
+        print('1º Brasil')
+        if saldoCamaroes > saldoServia and saldoCamaroes > saldoSuica:
+            print('2º Camarões')
+        elif saldoServia > saldoCamaroes and saldoServia > saldoSuica:
+            print('2º Sérvia')
+        elif saldoSuica > saldoCamaroes and saldoSuica > saldoServia:
+            print('2º Suécia')
+
+# Camarões Vencedor
+    elif saldoCamaroes > saldoBrasil and saldoCamaroes > saldoServia and saldoCamaroes > saldoSuica:
+        if saldoBrasil > saldoServia and saldoBrasil > saldoSuica:
+            print('2º Brasil')
+        elif saldoServia > saldoBrasil and saldoServia > saldoSuica:
+            print('2º Sérvia')
+        elif saldoSuica > saldoBrasil and saldoSuica > saldoServia:
+            print('2º Suécia')
+
+# Sérvia Vencedor
+
+#ALTERAR PONTOS POR SALDO
+    elif pontosServia > pontosBrasil and pontosServia > pontosCamaroes and pontosServia > pontosSuica:
+        if pontosBrasil > pontosSuica and pontosBrasil > pontosCamaroes:
+            print('2º Brasil')
+        elif pontosCamaroes > pontosBrasil and pontosCamaroes > pontosSuica:
+            print('2º Camarões')
+        elif pontosSuica > pontosBrasil and pontosSuica > pontosCamaroes:
+            print('2º Suécia')
+
+# Suíça Vencedor
+    elif pontosSuica > pontosBrasil and pontosSuica > pontosServia and pontosSuica > pontosCamaroes:
+        if pontosBrasil > pontosServia and pontosBrasil > pontosCamaroes:
+            print('2º Brasil')
+        elif pontosServia > pontosBrasil and pontosServia > pontosCamaroes:
+            print('2º Sérvia')
+        elif pontosCamaroes > pontosBrasil and pontosCamaroes > pontosServia:
+            print('2º Camarões')
