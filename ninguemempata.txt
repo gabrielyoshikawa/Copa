@@ -1,0 +1,41 @@
+if pontosBrasil > pontosServia and pontosBrasil > pontosSuica and pontosBrasil > pontosCamaroes:
+    print('1º Brasil')
+    if pontosServia > pontosSuica and pontosServia > pontosCamaroes:
+        print('2° Sérvia')
+    elif pontosSuica > pontosServia and pontosSuica > pontosCamaroes:
+        print('2º Suíça')
+    elif pontosCamaroes > pontosServia and pontosCamaroes > pontosSuica:
+        print('2º Camarões')
+
+--------------------------------------------------------------------------------------
+
+elif pontosServia > pontosBrasil and pontosServia > pontosSuica and pontosServia > pontosCamaroes:
+    print('1º Sérvia')
+    if pontosBrasil > pontosSuica and pontosBrasil > pontosCamaroes:
+        print('2° Brasil')
+    elif pontosSuica > pontosBrasil and pontosSuica > pontosCamaroes:
+        print('2º Suíça')
+    elif pontosCamaroes > pontosBrasil and pontosCamaroes > pontosSuica:
+        print('2º Camarões')
+
+--------------------------------------------------------------------------------------
+
+eleif pontosSuica > pontosBrasil and pontosSuica > pontosServia and pontosSuica > pontosCamaroes:
+    print('1º Suíça')
+    if pontosBrasil > pontosServia and pontosBrasil > pontosCamaroes:
+        print('2° Brasil')
+    elif pontosServia > pontosBrasil and pontosServia > pontosCamaroes:
+        print('2º Sérvia')
+    elif pontosCamaroes > pontosBrasil and pontosCamaroes > pontosServia:
+        print('2º Camarões')
+    
+--------------------------------------------------------------------------------------
+
+elif pontosCamaroes > pontosBrasil and pontosCamaroes > pontosServia and pontosCamaroes > pontosCamaroes:
+    print('1º Camarões')
+    if pontosBrasil > pontosServia and pontosBrasil > pontosServia:
+        print('2° Brasil')
+    elif pontosServia > pontosBrasil and pontosServia > pontosSuica:
+        print('2º Sérvia')
+    elif pontosSuica > pontosBrasil and pontosSuica > pontosServia:
+        print('2º Suíça')
