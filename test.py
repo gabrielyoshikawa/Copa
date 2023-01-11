@@ -187,6 +187,14 @@ if pontosBrasil > pontosServia and pontosBrasil > pontosSuica and pontosBrasil >
         print('2º Camarões')
 
 # Brasil vencedor e 2º Lugar desempata em saldo de gols
+    elif pontosSuica == pontosCamaroes == pontosServia:
+        if saldoSuica > saldoCamaroes and saldoSuica > saldoServia:
+            print('2º Suíça')
+        elif saldoServia > saldoCamaroes and saldoServia > saldoSuica:
+            print('2º Sérvia')
+        elif saldoCamaroes > saldoSuica and saldoCamaroes > saldoServia:
+            print('2º Camarões')
+
     elif pontosServia == pontosSuica:
         if saldoServia > saldoSuica:
             print('2° Sérvia')
@@ -232,6 +240,14 @@ elif pontosServia > pontosBrasil and pontosServia > pontosSuica and pontosServia
         print('2º Camarões')
 
 # Sérvia vencedora e 2º Lugar desempata em saldo de gols
+    elif pontosBrasil == pontosCamaroes == pontosSuica:
+        if saldoBrasil > saldoCamaroes and saldoBrasil > saldoSuica:
+            print('2º Brasil')
+        elif saldoSuica > saldoCamaroes and saldoSuica > saldoBrasil:
+            print('2º Suíça')
+        elif saldoCamaroes > saldoBrasil and saldoCamaroes > saldoSuica:
+            print('2º Camarões')
+
     elif pontosBrasil == pontosSuica:
         if saldoBrasil > saldoSuica:
             print('2° Brasil')
@@ -277,6 +293,13 @@ elif pontosSuica > pontosBrasil and pontosSuica > pontosServia and pontosSuica >
         print('2º Camarões')
 
 # Suíça vencedora e 2º Lugar desempata em saldo de gols
+    elif pontosBrasil == pontosCamaroes == pontosServia:
+        if saldoBrasil > saldoCamaroes and saldoBrasil > saldoServia:
+            print('2º Brasil')
+        elif saldoServia > saldoCamaroes and saldoServia > saldoBrasil:
+            print('2º Sérvia')
+        elif saldoCamaroes > saldoBrasil and saldoCamaroes > saldoServia:
+            print('2º Camarões')
     elif pontosServia == pontosBrasil:
         if saldoServia > saldoBrasil:
             print('2° Sérvia')
@@ -322,6 +345,14 @@ elif pontosCamaroes > pontosBrasil and pontosCamaroes > pontosServia and pontosC
         print('2º Suíça')
 
 # Camarões vencedor e 2º Lugar desempata em saldo de gols
+    elif pontosBrasil == pontosSuica == pontosServia:
+        if saldoBrasil > saldoSuica and saldoBrasil > saldoServia:
+            print('2º Brasil')
+        elif saldoServia > saldoSuica and saldoServia > saldoBrasil:
+            print('2º Sérvia')
+        elif saldoSuica > saldoBrasil and saldoSuica > saldoServia:
+            print('2º Suíça')
+
     elif pontosServia == pontosSuica:
         if saldoServia > saldoSuica:
             print('2° Sérvia')
@@ -357,7 +388,7 @@ elif pontosCamaroes > pontosBrasil and pontosCamaroes > pontosServia and pontosC
             print('2° Sérvia')
 
 # 2 Seleções empatando em primeiro
-if pontosBrasil == pontosServia and pontosBrasil > pontosCamaroes and pontosBrasil > pontosSuica:
+elif pontosBrasil == pontosServia and pontosBrasil > pontosCamaroes and pontosBrasil > pontosSuica:
     if saldoBrasil > saldoServia:
         print('1º Brasil\n2° Sérvia')
     else:
@@ -384,10 +415,10 @@ elif pontosServia == pontosSuica and pontosServia > pontosCamaroes and pontosSer
 elif pontosServia == pontosCamaroes and pontosServia > pontosSuica and pontosServia > pontosBrasil:
         if saldoServia > saldoCamaroes:
             print('1º Sérvia\n2° Camarões')
-        else:
+        elif saldoCamaroes > saldoServia:
             print('1° Camarões\n2° Sérvia')
 
-if pontosSuica == pontosCamaroes and pontosSuica > pontosServia and pontosSuica > pontosBrasil:
+elif pontosSuica == pontosCamaroes and pontosSuica > pontosServia and pontosSuica > pontosBrasil:
         if saldoSuica > saldoCamaroes:
             print('1º Suíça\n2° Camarões')
         else:
@@ -395,83 +426,151 @@ if pontosSuica == pontosCamaroes and pontosSuica > pontosServia and pontosSuica 
 
 # 3 Seleções empatando em primeiro
 
-if pontosBrasil == pontosSuica and pontosBrasil == pontosServia:
+elif pontosBrasil == pontosSuica and pontosBrasil == pontosServia:
     if saldoBrasil > saldoSuica and saldoBrasil > saldoServia:
         print('1° Brasil')
         if saldoServia > saldoSuica:
             print('2º Sérvia')
-        else:
+        elif saldoSuica > saldoServia:
             print('2º Suíça')
+        elif saldoServia == saldoSuica:
+            if golMarcadoServia > golMarcadoSuica:
+                print('2º Sérvia')
+            else:
+                print('2º Suíça')
+
     elif saldoSuica > saldoBrasil and saldoSuica > saldoServia:
         print('1° Suíça')
         if saldoServia > saldoBrasil:
             print('2º Sérvia')
-        else:
+        elif saldoBrasil > saldoServia:
             print('2º Brasil')
+        elif saldoBrasil == saldoServia:
+            if golMarcadoBrasil > golMarcadoServia:
+                print('2º Brasil')
+            else:
+                print('2º Sérvia')
+
     elif saldoServia > saldoBrasil and saldoServia > saldoSuica:
         print('1° Sérvia')
         if saldoBrasil > saldoSuica:
             print('2º Brasil')
-        else:
+        elif saldoSuica > saldoBrasil:
             print('2º Suíça')
+        elif saldoSuica == saldoBrasil:
+            if golMarcadoSuica > golMarcadoBrasil:
+                print('2º Suíça')
+            else:
+                print('2º Brasil')
 
 elif pontosBrasil == pontosServia and pontosBrasil == pontosCamaroes:
     if saldoBrasil > saldoServia and saldoBrasil > saldoCamaroes:
         print('1° Brasil')
         if saldoServia > saldoCamaroes:
             print('2º Sérvia')
-        else:
+        elif saldoCamaroes > saldoServia:
             print('2º Camarões')
+        elif saldoCamaroes == saldoServia:
+            if golMarcadoCamaroes > golMarcadoServia:
+                print('2º Camarões')
+            else:
+                print('2º Sérvia')
+            
     elif saldoServia > saldoBrasil and saldoServia > saldoCamaroes:
         print('1° Sérvia')
         if saldoBrasil > saldoSuica:
             print('2° Brasil')
-        else:
+        elif saldoSuica > saldoBrasil:
             print('2° Camarões')
+        elif saldoSuica == saldoBrasil:
+            if golMarcadoSuica > golMarcadoBrasil:
+                print('2º Suíça')
+            else:
+                print('2º Brasil')
+        
     elif saldoCamaroes > saldoBrasil and saldoCamaroes > saldoServia:
         print('1° Camarões')
         if saldoBrasil > saldoServia:
             print('2° Brasil')
-        else:
+        elif saldoServia > saldoBrasil:
             print('2° Sérvia')
+        elif saldoServia == saldoBrasil:
+            if golMarcadoServia > golMarcadoBrasil:
+                print('2º Sérvia')
+            else:
+                print('2º Brasil')
 
 elif pontosBrasil == pontosSuica and pontosBrasil == pontosCamaroes:
     if saldoBrasil > saldoSuica and saldoBrasil > saldoCamaroes:
         print('1° Brasil')
         if saldoSuica > saldoCamaroes:
             print('2º Suíça')
-        else:
+        elif saldoCamaroes > saldoSuica:
             print('2º Camarões')
+        elif saldoCamaroes == saldoSuica:
+            if golMarcadoCamaroes > golMarcadoSuica:
+                print('2º Camarões')
+            else:
+                print('2º Suíça')
+
     elif saldoSuica > saldoBrasil and saldoSuica > saldoCamaroes:
         print('1° Suíça')
         if saldoBrasil > saldoCamaroes:
             print('2º Brasil')
-        else:
+        elif saldoBrasil < saldoCamaroes:
             print('2º Camarões')
+        elif saldoBrasil == saldoCamaroes:
+            if golMarcadoCamaroes > golMarcadoBrasil:
+                print('2º Camarões')
+            else:
+                print('2º Brasil')
+
     elif saldoCamaroes > saldoBrasil and saldoCamaroes > saldoSuica:
         print('1° Camarões')
         if saldoBrasil > saldoSuica:
             print('2º Brasil')
-        else:
+        elif saldoSuica > saldoBrasil:
             print('2º Suíça')
+        elif saldoSuica == saldoBrasil:
+            if golMarcadoSuica > golMarcadoBrasil:
+                print('2º Suíça')
+            else:
+                print('2º Brasil')
 
 elif pontosServia == pontosSuica and pontosServia == pontosCamaroes:
     if saldoServia > saldoSuica and saldoServia> saldoCamaroes:
         print('1° Sérvia')
         if saldoSuica > saldoCamaroes:
             print('2º Suíça')
-        else:
+        elif saldoCamaroes > saldoSuica:
             print('2º Camarões')
+        elif saldoCamaroes == saldoSuica:
+            if golMarcadoCamaroes > golMarcadoSuica:
+                print('2º Suíça')
+            elif golMarcadoSuica > golMarcadoCamaroes:
+                print('2º Camarões')
+
     elif saldoSuica > saldoServia and saldoSuica > saldoCamaroes:
         print('1° Suíça')
         if saldoServia > saldoCamaroes:
             print('2º Sérvia')
-        else:
+        elif saldoCamaroes > saldoServia:
             print('2º Camarões')
+        elif saldoCamaroes == saldoServia:
+            if golMarcadoCamaroes > golMarcadoServia:
+                print('2º Camarões')
+            else:
+                print('2º Sérvia')
+
     elif saldoCamaroes > saldoServia and saldoCamaroes > saldoSuica:
         print('1° Camarões')
         if saldoServia > saldoSuica:
             print('2º Sérvia')
-        else:
+        elif saldoSuica > saldoServia:
             print('2º Suíça')
+        elif saldoServia == saldoSuica:
+            if golMarcadoServia > golMarcadoSuica:
+                print('2º Sérvia')
+            else:
+                print('2º Suíça')
     
