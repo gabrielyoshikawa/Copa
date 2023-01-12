@@ -41,20 +41,22 @@ saldoCamaroes = 0
 resultado = []
 
 #Tabela Jogos e Placares
-print("Jogos e Placares:")
-for i in grupo:
-    for j in grupo:
-        if i != j and i != grupo[3] and j != grupo[0]:
-            if i == grupo[2] and j == grupo[1]:
-                pass
-            else:
-                placar1 = random.randint(0,10)
-                placar2 = random.randint(0,10)
-                print(i, placar1, placar2, j)
-                resultado.append(i)
-                resultado.append(placar1)
-                resultado.append(placar2)
-                resultado.append(j)
+def tabelaJogosPlacares():
+    print("Jogos e Placares:")
+    for i in grupo:
+        for j in grupo:
+            if i != j and i != grupo[3] and j != grupo[0]:
+                if i == grupo[2] and j == grupo[1]:
+                    pass
+                else:
+                    placar1 = random.randint(0,10)
+                    placar2 = random.randint(0,10)
+                    print(i, placar1, placar2, j)
+                    resultado.append(i)
+                    resultado.append(placar1)
+                    resultado.append(placar2)
+                    resultado.append(j)
+tabelaJogosPlacares()
 
 #Pontuação - Vitória / Empate / Derrota
 #Brasil x Sérvia
