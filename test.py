@@ -425,7 +425,6 @@ elif pontosSuica == pontosCamaroes and pontosSuica > pontosServia and pontosSuic
             print('1° Camarões\n2° Suíça')
 
 # 3 Seleções empatando em primeiro
-
 elif pontosBrasil == pontosSuica and pontosBrasil == pontosServia:
     if saldoBrasil > saldoSuica and saldoBrasil > saldoServia:
         print('1° Brasil')
@@ -597,20 +596,19 @@ elif pontosBrasil == pontosCamaroes == pontosServia == pontosSuica:
 
 # Sérvia Vencedor
 
-#ALTERAR PONTOS POR SALDO
-    elif pontosServia > pontosBrasil and pontosServia > pontosCamaroes and pontosServia > pontosSuica:
-        if pontosBrasil > pontosSuica and pontosBrasil > pontosCamaroes:
+    elif saldoServia > saldoBrasil and saldoServia > saldoCamaroes and saldoServia > saldoSuica:
+        if saldoBrasil > saldoSuica and saldoBrasil > saldoCamaroes:
             print('2º Brasil')
-        elif pontosCamaroes > pontosBrasil and pontosCamaroes > pontosSuica:
+        elif saldoCamaroes > saldoBrasil and saldoCamaroes > saldoSuica:
             print('2º Camarões')
-        elif pontosSuica > pontosBrasil and pontosSuica > pontosCamaroes:
+        elif saldoSuica > saldoBrasil and saldoSuica > saldoCamaroes:
             print('2º Suécia')
 
 # Suíça Vencedor
-    elif pontosSuica > pontosBrasil and pontosSuica > pontosServia and pontosSuica > pontosCamaroes:
-        if pontosBrasil > pontosServia and pontosBrasil > pontosCamaroes:
+    elif saldoSuica > saldoBrasil and saldoSuica > saldoServia and saldoSuica > saldoCamaroes:
+        if saldoBrasil > saldoServia and saldoBrasil > saldoCamaroes:
             print('2º Brasil')
-        elif pontosServia > pontosBrasil and pontosServia > pontosCamaroes:
+        elif saldoServia > saldoBrasil and saldoServia > saldoCamaroes:
             print('2º Sérvia')
-        elif pontosCamaroes > pontosBrasil and pontosCamaroes > pontosServia:
+        elif saldoCamaroes > saldoBrasil and saldoCamaroes > saldoServia:
             print('2º Camarões')
